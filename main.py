@@ -7,7 +7,6 @@ filepaths = glob.glob('invoices/*.xlsx')
 
 for filepath in filepaths:
 
-
     pdf = FPDF(orientation="P", unit="mm", format="A4")
     pdf.add_page()
 
@@ -60,8 +59,6 @@ for filepath in filepaths:
     pdf.set_font(family="Arial", size=14, style="B")
     pdf.cell(w=30, h=8, txt=f"PythonHow")
     pdf.image('pythonhow.png', w=10)
-
-
 
     pdf.output(f"PDFs/{filename}.pdf")
 
